@@ -1,0 +1,196 @@
+{
+  "records": [
+    {
+      "developerName": "BoligberegnerUsage",
+      "masterLabel": "BoligberegnerUsage",
+      "category": "Engagement",
+      "externalDataTranFields": [
+        {
+          "masterLabel": "Hussstandens indkomst",
+          "dataType": "Number",
+          "developerName": "husstandensIndkomst",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "Egen Opsparing-formue",
+          "dataType": "Number",
+          "developerName": "egenOpsparingFormue",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "Gaeld",
+          "dataType": "Number",
+          "developerName": "gaeld",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "eventId",
+          "dataType": "Text",
+          "developerName": "eventId",
+          "isDataRequired": true,
+          "primaryIndexOrder": 1
+        },
+        {
+          "masterLabel": "category",
+          "dataType": "Text",
+          "developerName": "category",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "dateTime",
+          "dataType": "DateTime",
+          "developerName": "dateTime",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "deviceId",
+          "dataType": "Text",
+          "developerName": "deviceId",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "eventType",
+          "dataType": "Text",
+          "developerName": "eventType",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "sessionId",
+          "dataType": "Text",
+          "developerName": "sessionId",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "anonymousId",
+          "dataType": "Text",
+          "developerName": "anonymousId",
+          "isDataRequired": true
+        }
+        ]
+    },
+    {
+      "developerName": "BookMeetingForm",
+      "masterLabel": "BookMeetingForm",
+      "category": "Profile",
+      "externalDataTranFields": [
+        {
+          "masterLabel": "FirstName",
+          "dataType": "Text",
+          "developerName": "firstName",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "LastName",
+          "dataType": "Text",
+          "developerName": "lastName",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "Phone",
+          "dataType": "Text",
+          "developerName": "phone",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "Email",
+          "dataType": "Text",
+          "developerName": "email",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "eventId",
+          "dataType": "Text",
+          "developerName": "eventId",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "category",
+          "dataType": "Text",
+          "developerName": "category",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "dateTime",
+          "dataType": "DateTime",
+          "developerName": "dateTime",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "deviceId",
+          "dataType": "Text",
+          "developerName": "deviceId",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "eventType",
+          "dataType": "Text",
+          "developerName": "eventType",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "sessionId",
+          "dataType": "Text",
+          "developerName": "sessionId",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "anonymousId",
+          "dataType": "Text",
+          "developerName": "anonymousId",
+          "isDataRequired": true,
+          "primaryIndexOrder": 1
+        }
+        ]
+    },
+    {
+      "developerName": "BoligKoebetsFaserVisit",
+      "masterLabel": "BoligKoebetsFaserVisit",
+      "category": "Engagement",
+      "externalDataTranFields": [
+        {
+          "masterLabel": "eventId",
+          "dataType": "Text",
+          "developerName": "eventId",
+          "isDataRequired": true,
+          "primaryIndexOrder": 1
+        },
+        {
+          "masterLabel": "category",
+          "dataType": "Text",
+          "developerName": "category",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "dateTime",
+          "dataType": "DateTime",
+          "developerName": "dateTime",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "deviceId",
+          "dataType": "Text",
+          "developerName": "deviceId",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "eventType",
+          "dataType": "Text",
+          "developerName": "eventType",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "sessionId",
+          "dataType": "Text",
+          "developerName": "sessionId",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "anonymousId",
+          "dataType": "Text",
+          "developerName": "anonymousId",
+          "isDataRequired": true
+        }
+        ]
+    }
+  ]
+}
