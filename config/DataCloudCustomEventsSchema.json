@@ -14,7 +14,7 @@
         {
           "masterLabel": "egenUdbetaling",
           "dataType": "Number",
-          "developerName": "egenOpsparingFormue",
+          "developerName": "egenUdbetaling",
           "isDataRequired": true
         },
         {
