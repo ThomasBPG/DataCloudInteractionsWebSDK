@@ -7,13 +7,13 @@
       "externalDataTranFields": [
         {
           "masterLabel": "boligensPris",
-          "dataType": "Number",
+          "dataType": "Text",
           "developerName": "boligensPris",
           "isDataRequired": true
         },
         {
           "masterLabel": "egenUdbetaling",
-          "dataType": "Number",
+          "dataType": "Text",
           "developerName": "egenUdbetaling",
           "isDataRequired": true
         },
