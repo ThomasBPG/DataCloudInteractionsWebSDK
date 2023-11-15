@@ -2,8 +2,21 @@ import { LightningElement } from 'lwc';
 
 export default class BoligBeregner extends LightningElement {
 
+    boligensPris = "";
+    egenUdbetaling = "";
+
+    handleBoligensPrisChange(event)
+    {
+      this.boligensPris = event.target.value;
+    }
+
+    handleEgenUdbetalingChange(event)
+    {
+      this.egenUdbetaling = event.target.value;
+    }
+
     handleClick(event) {
-        console.log("## Clicked Beregn in LWC; now submitting to Data Cloud");
+        console.log("## Button 'Beregn' clicked; now submitting to Data Cloud");
 
         var anonymousId = SalesforceInteractions.getAnonymousId();
         console.log("AnonymousId: " + anonymousId);
@@ -12,16 +25,14 @@ export default class BoligBeregner extends LightningElement {
 
         SalesforceInteractions.sendEvent({
             interaction: {
-              name: 'BoligberegnerUsage',
-              eventType: 'BoligberegnerUsage',
+              name: 'Boliglaansberegner',
+              eventType: 'Boliglaansberegner',
               anonymousId: anonymousId,
-              husstandensIndkomst: 50000,
-              egenOpsparingFormue: 2300000,
-              gaeld: 560000
+              boligensPris: this.boligensPris,
+              egenUdbetaling: this.egenUdbetaling
             }
-          });
+          }).then(() => { console.log("Event emitted to Data Cloud"); });
 
-        console.log("Event emitted to Data Cloud");
     }
 
 }

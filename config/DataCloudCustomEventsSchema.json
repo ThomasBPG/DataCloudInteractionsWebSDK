@@ -1,26 +1,20 @@
 {
   "records": [
     {
-      "developerName": "BoligberegnerUsage",
-      "masterLabel": "BoligberegnerUsage",
+      "developerName": "Boliglaansberegner",
+      "masterLabel": "Boliglaansberegner",
       "category": "Engagement",
       "externalDataTranFields": [
         {
-          "masterLabel": "Hussstandens indkomst",
+          "masterLabel": "boligensPris",
           "dataType": "Number",
-          "developerName": "husstandensIndkomst",
+          "developerName": "boligensPris",
           "isDataRequired": true
         },
         {
-          "masterLabel": "Egen Opsparing-formue",
+          "masterLabel": "egenUdbetaling",
           "dataType": "Number",
           "developerName": "egenOpsparingFormue",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "Gaeld",
-          "dataType": "Number",
-          "developerName": "gaeld",
           "isDataRequired": true
         },
         {
@@ -69,8 +63,8 @@
         ]
     },
     {
-      "developerName": "BookMeetingForm",
-      "masterLabel": "BookMeetingForm",
+      "developerName": "ContactForm",
+      "masterLabel": "ContactForm",
       "category": "Profile",
       "externalDataTranFields": [
         {
@@ -86,18 +80,30 @@
           "isDataRequired": true
         },
         {
-          "masterLabel": "Phone",
-          "dataType": "Text",
-          "developerName": "phone",
-          "isDataRequired": true
-        },
-        {
           "masterLabel": "Email",
           "dataType": "Text",
           "developerName": "email",
           "isDataRequired": true
         },
         {
+          "masterLabel": "Phone",
+          "dataType": "Text",
+          "developerName": "phone",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "ExistingCustomer",
+          "dataType": "Text",
+          "developerName": "existingCustomer",
+          "isDataRequired": true
+        },
+        {
+          "masterLabel": "Comment",
+          "dataType": "Text",
+          "developerName": "comment",
+          "isDataRequired": true
+        },
+        {
           "masterLabel": "eventId",
           "dataType": "Text",
           "developerName": "eventId",
@@ -139,56 +145,6 @@
           "developerName": "anonymousId",
           "isDataRequired": true,
           "primaryIndexOrder": 1
-        }
-        ]
-    },
-    {
-      "developerName": "BoligKoebetsFaserVisit",
-      "masterLabel": "BoligKoebetsFaserVisit",
-      "category": "Engagement",
-      "externalDataTranFields": [
-        {
-          "masterLabel": "eventId",
-          "dataType": "Text",
-          "developerName": "eventId",
-          "isDataRequired": true,
-          "primaryIndexOrder": 1
-        },
-        {
-          "masterLabel": "category",
-          "dataType": "Text",
-          "developerName": "category",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "dateTime",
-          "dataType": "DateTime",
-          "developerName": "dateTime",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "deviceId",
-          "dataType": "Text",
-          "developerName": "deviceId",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "eventType",
-          "dataType": "Text",
-          "developerName": "eventType",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "sessionId",
-          "dataType": "Text",
-          "developerName": "sessionId",
-          "isDataRequired": true
-        },
-        {
-          "masterLabel": "anonymousId",
-          "dataType": "Text",
-          "developerName": "anonymousId",
-          "isDataRequired": true
         }
         ]
     }

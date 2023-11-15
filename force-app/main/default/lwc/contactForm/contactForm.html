@@ -1,0 +1,24 @@
+<template>
+    <h1>Hør mere om dine muligheder</h1>
+    <br />
+    Udfyld vores formular, så hører du fra os hurtigst muligt.
+    <br />
+    <br />
+    <lightning-input name="firstName" type="text" onchange={handleFirstNameChange} placeholder="Fornavn"></lightning-input>
+    <br />
+    <lightning-input name="lastName" type="text" onchange={handleLastNameChange} placeholder="Efternavn"></lightning-input>
+    <br />
+    <lightning-input name="email" type="text" onchange={handleEmailChange} placeholder="Mail"></lightning-input>
+    <br />
+    <lightning-input name="phone" type="text" onchange={handlePhoneChange} placeholder="Telefonnummer"></lightning-input>
+    <br />
+    <lightning-radio-group name="existingCustomer"
+                          label="Er du allerede kunde?"
+                          options={options}
+                          value={value}
+                          type="radio" onchange={handleExistingCustomerChange}></lightning-radio-group>
+    <br />
+    <lightning-input name="comment" type="text" placeholder="Kommentarer" onchange={handleCommentChange}></lightning-input>
+    <br />
+    <lightning-button label="Kontakt" title="Kontakt" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+</template>

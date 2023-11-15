@@ -1,12 +1,10 @@
 <template>
-    <h1>Bolig beregner</h1>
+    <h1>Hvad koster et l&aring;n til ny bolig?</h1>
+    <br />
+    Med vores boliglånsberegner kan du få en vejledende beregning på, hvor meget et lån til ejerbolig, andelslejlighed eller sommerhus koster. Når du beregner dit boliglån, får du samtidig finansieringsforslag på forskellige lånetyper, så kan du se, hvad der passer bedst til din økonomi.
     <br />
     <br />
-    <lightning-input type="text" label="Hvor meget vil du låne?"></lightning-input>
-    <br />
-    <br />
-    Ved brug af Bolig beregner tillader du samtidig at vi opbevarer og analyserer på brugen.
-    <br />
-    <br />
+    <lightning-input type="text" name="boligensPris" onchange={handleBoligensPrisChange} placeholder="Boligens pris"></lightning-input>
+    <lightning-input type="text" name="egenUdbetaling" onchange={handleEgenUdbetalingChange} placeholder="Egen udbetaling"></lightning-input>
     <lightning-button label="Beregn" title="Beregn" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
 </template>
