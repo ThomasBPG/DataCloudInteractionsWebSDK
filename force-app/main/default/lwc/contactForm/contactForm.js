@@ -6,7 +6,7 @@ import PHONE_FIELD from "@salesforce/schema/Lead.Phone";
 import EMAIL_FIELD from "@salesforce/schema/Lead.Email";
 
 export default class BookMeeting extends LightningElement {
-
+    value = "no";
     firstName = "";
     lastName = "";
     email = "";
@@ -37,6 +37,9 @@ export default class BookMeeting extends LightningElement {
     handleExistingCustomerChange(event)
     {
         this.existingCustomer = event.target.value;
+        if (this.existingCustomer === "yes") {
+            this.handleClick();
+        }
     }
 
     handleCommentChange(event)
@@ -44,7 +47,7 @@ export default class BookMeeting extends LightningElement {
         this.comment = event.target.value;
     }
 
-    handleClick(event) {
+    handleClick() {
 
         // Send event to Data Cloud
         console.log("## Button Kontakt Nykredit clicked; now submitting to Data Cloud");
@@ -67,8 +70,6 @@ export default class BookMeeting extends LightningElement {
             }
           }).then(() => { console.log("Event emitted to Data Cloud"); });
     }
-
-    value = '';
 
     get options() {
         return [
