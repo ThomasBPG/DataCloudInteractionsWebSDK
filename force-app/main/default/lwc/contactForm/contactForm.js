@@ -50,7 +50,7 @@ export default class BookMeeting extends LightningElement {
     handleClick() {
 
         // Send event to Data Cloud
-        console.log("## Button Kontakt Nykredit clicked; now submitting to Data Cloud");
+        console.log("## Button Kontakt clicked; now submitting to Data Cloud");
 
         var anonymousId = SalesforceInteractions.getAnonymousId();
         console.log("AnonymousId: " + anonymousId);
