@@ -1,9 +1,9 @@
-import { LightningElement } from 'lwc';
-import { createRecord } from 'lightning/uiRecordApi';
-import LEAD_OBJECT from "@salesforce/schema/Lead";
-import NAME_FIELD from "@salesforce/schema/Lead.Name";
-import PHONE_FIELD from "@salesforce/schema/Lead.Phone";
-import EMAIL_FIELD from "@salesforce/schema/Lead.Email";
+import { LightningElement, wire } from 'lwc';
+import {
+    MessageContext,
+    publish,
+} from 'lightning/messageService';
+import channel from '@salesforce/messageChannel/DataCloudWebSDK__c';
 
 export default class BookMeeting extends LightningElement {
     value = "no";
@@ -13,6 +13,9 @@ export default class BookMeeting extends LightningElement {
     phone = "";
     existingCustomer = "";
     comment = "";
+
+    @wire(MessageContext)
+    messageContext;
 
     handleFirstNameChange(event)
     {
@@ -48,27 +51,19 @@ export default class BookMeeting extends LightningElement {
     }
 
     handleClick() {
-
-        // Send event to Data Cloud
-        console.log("## Button Kontakt clicked; now submitting to Data Cloud");
-
-        var anonymousId = SalesforceInteractions.getAnonymousId();
-        console.log("AnonymousId: " + anonymousId);
-
-        SalesforceInteractions.setLoggingLevel(5);
-        SalesforceInteractions.sendEvent({
-            interaction: {
-              name: 'ContactForm',
-              eventType: 'ContactForm',
-              anonymousId: anonymousId,
-              firstName: this.firstName,
-              lastName: this.lastName,
-              email: this.email,
-              phone: this.phone,
-              existingCustomer: this.existingCustomer,
-              comment: this.comment
+        publish(this.messageContext, channel, {
+            "event": "send",
+            "payload": {
+                name: 'ContactForm',
+                eventType: 'ContactForm',
+                firstName: this.firstName,
+                lastName: this.lastName,
+                email: this.email,
+                phone: this.phone,
+                existingCustomer: this.existingCustomer,
+                comment: this.comment
             }
-          }).then(() => { console.log("Event emitted to Data Cloud"); });
+        })
     }
 
     get options() {
