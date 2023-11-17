@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Data Cloud Web SDK</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message Channel to communicate for the Data Cloud Web SDK</description>
+    <lightningMessageFields>
+        <fieldName>event</fieldName>
+        <description>The event name</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>optin</fieldName>
+        <description>The optin status of the user sent with the ready event</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>payload</fieldName>
+        <description>Payload a component wants to send</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
