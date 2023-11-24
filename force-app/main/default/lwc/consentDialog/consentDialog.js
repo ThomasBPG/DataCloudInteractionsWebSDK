@@ -117,7 +117,7 @@ export default class ConsentDialog extends LightningElement {
                     SalesforceInteractions.setLoggingLevel(5);
                     await SalesforceInteractions.init({
                         consents: [{ 
-                            provider: 'MyFitnessTracker Provider', 
+                            provider: 'InteractionsWebSDK', 
                             purpose: 'Tracking', 
                             status: SalesforceInteractions.ConsentStatus.OptIn 
                         }]
