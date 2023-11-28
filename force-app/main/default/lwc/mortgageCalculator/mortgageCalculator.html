@@ -1,0 +1,10 @@
+<template>
+    <h1>How much do I have to pay per month for my new mortgage?</h1>
+    <br />
+    This is a simple calculator, that will determine your monthly payment on a mortgage loan.
+    <br />
+    <br />
+    <lightning-input type="text" name="housePrice" onchange={handleHousePriceChange} placeholder="House pris"></lightning-input>
+    <lightning-input type="text" name="downPayment" onchange={handleDownPaymentChange} placeholder="Down payment"></lightning-input>
+    <lightning-button label="Calculate" title="Calculate" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+</template>

@@ -1,20 +1,20 @@
 {
   "records": [
     {
-      "developerName": "Boliglaansberegner",
-      "masterLabel": "Boliglaansberegner",
+      "developerName": "MortgageCalculator",
+      "masterLabel": "MortgageCalculator",
       "category": "Engagement",
       "externalDataTranFields": [
         {
-          "masterLabel": "boligensPris",
+          "masterLabel": "housePrice",
           "dataType": "Text",
-          "developerName": "boligensPris",
+          "developerName": "housePrice",
           "isDataRequired": true
         },
         {
-          "masterLabel": "egenUdbetaling",
+          "masterLabel": "downPayment",
           "dataType": "Text",
-          "developerName": "egenUdbetaling",
+          "developerName": "downPayment",
           "isDataRequired": true
         },
         {
